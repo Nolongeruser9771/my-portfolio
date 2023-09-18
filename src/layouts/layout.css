@@ -1,0 +1,47 @@
+/* nav */
+.container .nav {
+  height: 4rem;
+}
+
+.navbar > div {
+  margin-right: 10px;
+  & a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+  }
+}
+
+.navbar > div:hover, .active {
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  & a {
+    color: white;
+  }
+}
+
+.col.decor-btn {
+  padding: 5px 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(198, 62, 224, 1) 0%,
+    rgba(166, 0, 255, 1) 30%,
+    rgba(15, 8, 254, 1) 99%
+  );
+}
+
+.col.decor-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 8, 254, 1) 0%,
+    rgba(166, 0, 255, 1) 50%,
+    rgba(198, 62, 224, 1) 99%
+  );
+}
+
+.col.decor-btn > a {
+  color: white;
+}
