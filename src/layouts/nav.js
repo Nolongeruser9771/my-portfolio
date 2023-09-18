@@ -5,7 +5,7 @@ export default function Navigator() {
   console.log(location);
   const navbar = [
     {
-      pathname: "/home",
+      pathname: "/my-portfolio",
       name: "Home",
     },
     {
