@@ -20,7 +20,7 @@ export default function Projects() {
             translation. Users can also cut short videos and save to their
             playlists.
           </p>
-          <Link to="https://github.com/Nolongeruser9771/jabTube" className="btn">View</Link>
+          <Link to="https://github.com/Nolongeruser9771/jabTube" target="_blank" className="btn">View</Link>
         </div>
 
         <div className="col project-item">
@@ -39,7 +39,7 @@ export default function Projects() {
             blogs; Authors also can CRUD their owns blogs, search or read other
             blogs;
           </p>
-          <Link to="https://github.com/Nolongeruser9771/meow-blog" className="btn">View</Link>
+          <Link to="https://github.com/Nolongeruser9771/meow-blog" target="_blank" className="btn">View</Link>
         </div>
 
         <div className="col project-item">
@@ -58,7 +58,7 @@ export default function Projects() {
             to-do items. Once the task is added, the user will be able to delete
             it as completed once it has done.
           </p>
-          <Link to="https://github.com/Nolongeruser9771/to-do-app" className="btn">View</Link>
+          <Link to="https://github.com/Nolongeruser9771/to-do-app" target="_blank" className="btn">View</Link>
         </div>
       </div>
     </div>
