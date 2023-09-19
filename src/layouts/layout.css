@@ -3,6 +3,17 @@
   height: 4rem;
 }
 
+.nav span {
+  padding: 0px 10px;
+  &:first-child {
+    border-right: 1px solid black;
+  }
+  &:hover {
+    cursor: pointer;
+    color: #a634b0;
+  }
+}
+
 .navbar > div {
   margin-right: 10px;
   & a {
@@ -12,7 +23,8 @@
   }
 }
 
-.navbar > div:hover, .active {
+.navbar > div:hover,
+.active {
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -21,7 +33,7 @@
   }
 }
 
-.col.decor-btn {
+.decor-btn {
   padding: 5px 20px;
   border-radius: 20px;
   background: linear-gradient(
@@ -44,4 +56,12 @@
 
 .col.decor-btn > a {
   color: white;
+}
+
+.switch-lang-btn {
+  color: white;
+}
+
+.lang-active {
+  color: #a634b0;
 }
