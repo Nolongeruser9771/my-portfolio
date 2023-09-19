@@ -11,8 +11,10 @@ import {
 } from "react-icons/fa6";
 
 import Logo from "../assets/images/logo.png";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="row">
@@ -22,36 +24,46 @@ export default function Home() {
               <div className="">
                 <img src={DecorImage} alt="" className="decor-img" />
               </div>
-              <h1>Hello</h1>
-              <h2>I'm Nguyen</h2>
+              <h1>{t("Hello")}</h1>
+              <h2>{t("I'm Nguyen")}</h2>
               <div>
                 <img src={Logo} className="logo" alt=""></img>
               </div>
 
               <TypeAnimation
                 sequence={[
-                  "A self-taught developer and IT-comtor!",
+                  t('introduce-1'),
                   1000,
-                  "Who gets interest in Coding",
+                  t('introduce-2'),
                   1000,
-                  "Who gets interest in Animes",
+                  t('introduce-3'),
                   1000,
-                  "Who gets interest in Cats",
+                  t('introduce-4'),
                   1000,
                 ]}
                 wrapper="span"
                 speed={50}
-                style={{ fontSize: "1.5em", display: "inline-block", padding: "10px"}}
+                style={{
+                  fontSize: "1.5em",
+                  display: "inline-block",
+                  padding: "10px",
+                }}
                 repeat={Infinity}
               />
             </div>
           </div>
 
           <div className="row">
-            <Link to="https://www.facebook.com/nguyennguyenstudy101" className="contact-icon">
+            <Link
+              to="https://www.facebook.com/nguyennguyenstudy101"
+              className="contact-icon"
+            >
               <FaSquareFacebook />
             </Link>
-            <Link to="https://github.com/Nolongeruser9771" className="contact-icon">
+            <Link
+              to="https://github.com/Nolongeruser9771"
+              className="contact-icon"
+            >
               <FaSquareGithub />
             </Link>
             <Link className="contact-icon">

@@ -1,0 +1,26 @@
+{
+  "Home": "Home",
+  "About" : "About",
+  "Projects": "Projects",
+  "Contact": "Contact",
+  "Resume": "Resume",
+
+  "Hello": "Hello",
+  "I'm Nguyen": "I'm Nguyen",
+  "introduce-1": "A self-taught developer and IT-comtor!",
+  "introduce-2": "Who has interests in Coding",
+  "introduce-3": "Who has interests in Languages",
+  "introduce-4": "Who has interests in Cats",
+
+  "About me" : "About me",
+  "self-introduce": "I'm a self-learner who has interests in both coding and Languages. My future goal is to reach a high level both technologically and linguistically and to become a bridge between Japan and Vietnam. Currently, the skills required to build bridges are lacking, There may be many things I don't understand yet, but I would like to seriously aim for my goals and work 200% to grow as quickly as possible so that I can contribute to your company.",
+
+  "jabtube-description": "Website learning Japanese by watching films with available subtitles and translation. Users can also cut short videos and put to their playlists.",
+  "blog-description": "Meow Blog allows users to search and view other users' blogs as well as write and post their blogs with a couple of utils helping make a beautiful-simple post",
+  "to-do-app-description": "A simple To-Do App that allows users to add/clear/edit their tasks in handy, helping those forgotful people note their daily to-do lists.",
+  "View": "View",  
+
+  "Get In Touch" : "Get In Touch",
+  "contact-content" : "I’m currently searching for opportunities for a fresher/intern It-comtor/Bridge Engineer role. If there is any vacancy my inbox is always open. Whether you have any further questions or just want to say hi, I’ll try my best to get back to you!",
+  "Say Hello" : "Say Hello"
+}

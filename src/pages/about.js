@@ -1,10 +1,12 @@
 import AboutIllustrator from "../assets/images/about_illustation.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay} from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
   const logo = [
     {
       htmlEl: (
@@ -206,15 +208,9 @@ export default function About() {
         <div className="row">
           <div className="col-8">
             <div className="row self-introduce">
-              <h1>About me</h1>
+              <h1>{t('About me')}</h1>
               <p>
-                I m a self-taught Front End developer from India. I build
-                websites with a focus on providing the experience for everyone
-                using them and responsiveness. Curious to learn more about
-                developing scalable distribution systems, love problem solving,
-                and care about writing and maintainable code. A responsive
-                design makes your website accessible to all users, regardless of
-                their devices.
+                {t('self-introduce')}
               </p>
             </div>
             <div className="row lang-logo">
@@ -229,9 +225,7 @@ export default function About() {
                 }}
               >
                 {logo.map((logo, index) => (
-                  <SwiperSlide key={index}>
-                    {logo.htmlEl}
-                  </SwiperSlide>
+                  <SwiperSlide key={index}>{logo.htmlEl}</SwiperSlide>
                 ))}
               </Swiper>
             </div>

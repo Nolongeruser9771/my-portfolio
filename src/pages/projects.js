@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
+  const { t } = useTranslation();
   return (
     <div class="container">
       <div class="row no-gutters" style={{ display: "flex", gap: "3rem" }}>
@@ -15,12 +17,14 @@ export default function Projects() {
             allowfullscreen
           ></iframe>
           <h4>JapTube</h4>
-          <p>
-            Website learning Japanese by films providing subtitles and
-            translation. Users can also cut short videos and save to their
-            playlists.
-          </p>
-          <Link to="https://github.com/Nolongeruser9771/jabTube" target="_blank" className="btn">View</Link>
+          <p>{t("jabtube-description")}</p>
+          <Link
+            to="https://github.com/Nolongeruser9771/jabTube"
+            target="_blank"
+            className="btn"
+          >
+            {t("View")}
+          </Link>
         </div>
 
         <div className="col project-item">
@@ -34,12 +38,14 @@ export default function Projects() {
             allowfullscreen
           ></iframe>
           <h4>Meow Blog</h4>
-          <p>
-            Meow Blog allows users to post their blog with utils to help writing
-            blogs; Authors also can CRUD their owns blogs, search or read other
-            blogs;
-          </p>
-          <Link to="https://github.com/Nolongeruser9771/meow-blog" target="_blank" className="btn">View</Link>
+          <p>{t("blog-description")}</p>
+          <Link
+            to="https://github.com/Nolongeruser9771/meow-blog"
+            target="_blank"
+            className="btn"
+          >
+            {t("View")}
+          </Link>
         </div>
 
         <div className="col project-item">
@@ -53,12 +59,14 @@ export default function Projects() {
             allowfullscreen
           ></iframe>
           <h4>To-do-list App</h4>
-          <p>
-            To-Do App that build will allow a user to add a task to a list of
-            to-do items. Once the task is added, the user will be able to delete
-            it as completed once it has done.
-          </p>
-          <Link to="https://github.com/Nolongeruser9771/to-do-app" target="_blank" className="btn">View</Link>
+          <p>{t("to-do-app-description")}</p>
+          <Link
+            to="https://github.com/Nolongeruser9771/to-do-app"
+            target="_blank"
+            className="btn"
+          >
+            {t("View")}
+          </Link>
         </div>
       </div>
     </div>

@@ -1,59 +1,68 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "../translation/i18n";
 
 export default function Navigator() {
   let location = useLocation().pathname;
-  console.log(location);
+  //translation
+  const { t } = useTranslation();
+
   const navbar = [
     {
       pathname: "/my-portfolio",
-      name: "Home",
+      name: t('Home'),
     },
     {
       pathname: "/about",
-      name: "About",
+      name: t('About'),
     },
     {
       pathname: "/projects",
-      name: "Projects",
+      name: t('Projects'),
     },
     {
       pathname: "/contact",
-      name: "Contact",
+      name: t('Contact'),
     },
   ];
 
   //lang switch
-  const [on, setOn] = useState(
-    localStorage.getItem("ENG_ON")
-      ? JSON.parse(localStorage.getItem("ENG_ON"))
-      : true
+  const [lang, setLang] = useState(
+    localStorage.getItem("STORAGED_LANG")
+      ? JSON.parse(localStorage.getItem("STORAGED_LANG"))
+      : "en"
   );
+
+  useEffect(() => {
+    i18n.changeLanguage(lang)
+  }, [lang])
+
   const langSwitch = (targetLang) => {
     if (targetLang) {
-      setOn(targetLang === "en");
-      localStorage.setItem("ENG_ON", JSON.stringify(targetLang === "en"));
+      setLang(targetLang);
+      localStorage.setItem("STORAGED_LANG", JSON.stringify(targetLang));
     }
   };
 
   return (
     <div className="container">
       <div className="row nav">
-        <div className="col-6" style={{ textAlign: "left" }}>
+        <div className="col-5" style={{ textAlign: "left" }}>
           <span
             onClick={() => langSwitch("en")}
-            className={on ? "lang-active" : ""}
+            className={lang === "en" ? "lang-active" : ""}
           >
             English
           </span>
           <span
             onClick={() => langSwitch("jp")}
-            className={!on ? "lang-active" : ""}
+            className={lang === "jp" ? "lang-active" : ""}
           >
             日本語
           </span>
         </div>
-        <div className="col-6">
+        <div className="col-7">
           <div className="row navbar">
             {navbar.map((nav, index) => (
               <div
@@ -67,7 +76,7 @@ export default function Navigator() {
             ))}
 
             <div className="col decor-btn">
-              <Link to={""}>Resume</Link>
+              <Link to={""}>{t('Resume')}</Link>
             </div>
           </div>
         </div>
