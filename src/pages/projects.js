@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div class="container">
       <div class="row no-gutters" style={{ display: "flex", gap: "3rem" }}>
-        <div className="col project-item">
+        <div className="col col-12 col-sm-12 .col-md-12 col-lg col-xl project-item">
           <iframe
             width="100%"
             height="100%"
@@ -27,7 +27,7 @@ export default function Projects() {
           </Link>
         </div>
 
-        <div className="col project-item">
+        <div className="col col-12 col-sm-12 .col-md-12 col-lg col-xl project-item">
           <iframe
             width="100%"
             height="100%"
@@ -48,7 +48,7 @@ export default function Projects() {
           </Link>
         </div>
 
-        <div className="col project-item">
+        <div className="col col-12 col-sm-12 .col-md-12 col-lg col-xl project-item">
           <iframe
             width="100%"
             height="100%"

@@ -11,19 +11,19 @@ export default function Navigator() {
   const navbar = [
     {
       pathname: "/my-portfolio",
-      name: t('Home'),
+      name: t("Home"),
     },
     {
       pathname: "/about",
-      name: t('About'),
+      name: t("About"),
     },
     {
       pathname: "/projects",
-      name: t('Projects'),
+      name: t("Projects"),
     },
     {
       pathname: "/contact",
-      name: t('Contact'),
+      name: t("Contact"),
     },
   ];
 
@@ -35,8 +35,8 @@ export default function Navigator() {
   );
 
   useEffect(() => {
-    i18n.changeLanguage(lang)
-  }, [lang])
+    i18n.changeLanguage(lang);
+  }, [lang]);
 
   const langSwitch = (targetLang) => {
     if (targetLang) {
@@ -46,9 +46,12 @@ export default function Navigator() {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row nav">
-        <div className="col-5" style={{ textAlign: "left" }}>
+        <div
+          className="col-8 col-sm-8 col-md-4 col-lg-4"
+          style={{ textAlign: "left" }}
+        >
           <span
             onClick={() => langSwitch("en")}
             className={lang === "en" ? "lang-active" : ""}
@@ -62,22 +65,26 @@ export default function Navigator() {
             日本語
           </span>
         </div>
-        <div className="col-7">
+
+        <div className="col-4 col-sm-4 col-md-8 col-lg-8">
           <div className="row navbar">
             {navbar.map((nav, index) => (
               <div
                 key={index}
                 className={
-                  location === nav.pathname ? "col btn active" : "col btn"
+                  location === nav.pathname
+                    ? "col d-none col-sm col-md d-md-block col-lg btn active"
+                    : "col d-none col-sm col-md d-md-block col-lg btn"
                 }
               >
                 <Link to={nav.pathname}>{nav.name}</Link>
               </div>
             ))}
 
-            <div className="col decor-btn">
-              <Link to={""}>{t('Resume')}</Link>
+            <div className="col d-none col-sm col-md d-md-block col-lg decor-btn">
+              <Link to={"https://drive.google.com/file/d/1b2mB2l0JeeWnYXzRkC_xEh75n6aVmc9P/view?usp=sharing"}>{t("Resume")}</Link>
             </div>
+            
           </div>
         </div>
       </div>

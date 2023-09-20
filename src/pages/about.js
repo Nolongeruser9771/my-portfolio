@@ -202,11 +202,12 @@ export default function About() {
       ),
     },
   ];
+
   return (
     <div className="container">
       <div className="cover-box">
         <div className="row">
-          <div className="col-8">
+          <div className="col-12 col-sm-12 col-md-8 col-lg-8">
             <div className="row self-introduce">
               <h1>{t('About me')}</h1>
               <p>
@@ -215,7 +216,7 @@ export default function About() {
             </div>
             <div className="row lang-logo">
               <Swiper
-                spaceBetween={30}
+                spaceBetween={20}
                 slidesPerView={5}
                 modules={[Autoplay]}
                 autoplay={{
@@ -230,7 +231,7 @@ export default function About() {
               </Swiper>
             </div>
           </div>
-          <div className="col-4">
+          <div className="d-none col-md-4 d-md-block col-lg-4 d-lg-block">
             <img
               src={AboutIllustrator}
               alt=""
