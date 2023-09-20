@@ -59,7 +59,7 @@ export default function Layout({ children }) {
       <label htmlFor="nav-mobile-active" className="nav-overlay"></label>
 
       <div className="nav-mobile">
-        <label className="nav-bars-btn" htmlFor="nav-mobile-active">
+        <label className="nav-bars-btn" id="close" htmlFor="nav-mobile-active">
           <AiOutlineClose />
         </label>
         <ul className="nav-mobile-list">
