@@ -49,7 +49,7 @@ export default function Navigator() {
     <div className="container-fluid">
       <div className="row nav">
         <div
-          className="col-8 col-sm-8 col-md-4 col-lg-4"
+          className="col-8 col-sm-8 col-md-3 col-lg-4"
           style={{ textAlign: "left" }}
         >
           <span
@@ -66,7 +66,7 @@ export default function Navigator() {
           </span>
         </div>
 
-        <div className="col-4 col-sm-4 col-md-8 col-lg-8">
+        <div className="col-4 col-sm-4 col-md-9 col-lg-8">
           <div className="row navbar">
             {navbar.map((nav, index) => (
               <div

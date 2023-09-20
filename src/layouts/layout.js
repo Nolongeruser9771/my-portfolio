@@ -45,12 +45,13 @@ export default function Layout({ children }) {
     <div className="container wrapper">
       <input type="checkbox" className="" id="nav-mobile-active" hidden />
       <div className="row">
-        <div className="col-10 col-sm-11 col-md-12">
+        <div className="col-10 col-sm-11 col-md-11 col-lg-11">
           <Navigator />
         </div>
         <label
-          className="col-2 col-sm-1 d-md-none nav-mobile-active-btn"
+          className="col-2 col-sm-1 col-md-1 col-lg-1 nav-mobile-active-btn"
           htmlFor="nav-mobile-active"
+          style={{marginTop: '15px'}}
         >
           <FaBars />
         </label>
