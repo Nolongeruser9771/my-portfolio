@@ -80,6 +80,7 @@ export default function Layout({ children }) {
               to={
                 "https://drive.google.com/file/d/1b2mB2l0JeeWnYXzRkC_xEh75n6aVmc9P/view?usp=sharing"
               }
+              target="_blank"
             >
               {t("Resume")}
             </Link>

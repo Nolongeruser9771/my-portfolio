@@ -82,9 +82,15 @@ export default function Navigator() {
             ))}
 
             <div className="col d-none col-sm col-md d-md-block col-lg decor-btn">
-              <Link to={"https://drive.google.com/file/d/1b2mB2l0JeeWnYXzRkC_xEh75n6aVmc9P/view?usp=sharing"}>{t("Resume")}</Link>
+              <Link
+                target="_blank"
+                to={
+                  "https://drive.google.com/file/d/1b2mB2l0JeeWnYXzRkC_xEh75n6aVmc9P/view?usp=sharing"
+                }
+              >
+                {t("Resume")}
+              </Link>
             </div>
-            
           </div>
         </div>
       </div>
